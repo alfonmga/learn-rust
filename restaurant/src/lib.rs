@@ -15,7 +15,6 @@
 mod front_of_house;
 
 pub use crate::front_of_house::hosting;
-use crate::hosting::hosting::add_to_waitlist;
 
 mod back_of_house {
     pub enum Appetizer {
@@ -50,7 +49,7 @@ fn eat_at_restaurant() {
     // relative path
     // front_of_house::hosting::add_to_waitlist();
     // with the use key word above, we have brought the hosting module into scope
-    add_to_waitlist();
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
